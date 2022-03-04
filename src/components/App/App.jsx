@@ -10,6 +10,9 @@ import Footer from '../Footer/Footer.jsx';
 import Login from '../Login/Login.jsx';
 import Register from '../Register/Register.jsx';
 
+import Navbar from '../Navbar/Navbar.jsx';
+import { Route, Routes } from 'react-router-dom';
+import Menu from '../Menu/Menu.jsx';
 
 
 
@@ -20,17 +23,20 @@ export default class App extends Component
   {
     return (
       <>
-       {/* <Home/>
-       <About/>
-        <Skils/> 
-        <Portfolio/>
-        <Footer/> */}
-        <Login/>
-        
-        {/* <Register/> */}
-      
+         <Navbar/>
+   <div className='container'>
+     <Routes>
+       <Route path='menu' element={<Menu/>}> </Route>
+       <Route path='Login' element={<Login/>}> </Route>
+       <Route path='Register' element={<Register/>}> </Route>
+     </Routes>
 
-  
+   </div>
+      
+{/* <Home/>
+<Portfolio/>
+<Footer/>
+<Skils/>   */}
       </>
   
       
