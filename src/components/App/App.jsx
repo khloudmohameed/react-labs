@@ -9,11 +9,10 @@ import Portfolio from '../Portfolio/Portfolio.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Login from '../Login/Login.jsx';
 import Register from '../Register/Register.jsx';
-
+import Movie from '../Movie/Movie.jsx';
+import Detailes from '../Detaies/Detailes.jsx';
 import Navbar from '../Navbar/Navbar.jsx';
 import { Route, Routes } from 'react-router-dom';
-import Menu from '../Menu/Menu.jsx';
-
 
 
 export default class App extends Component
@@ -23,12 +22,13 @@ export default class App extends Component
   {
     return (
       <>
-         <Navbar/>
+          <Navbar/>
    <div className='container'>
-     <Routes>
-       <Route path='menu' element={<Menu/>}> </Route>
+   <Routes>
+       <Route path='movie' element={<Movie/>}> </Route>
        <Route path='Login' element={<Login/>}> </Route>
        <Route path='Register' element={<Register/>}> </Route>
+       <Route path='detais' element={<Detailes/>}> </Route>
      </Routes>
 
    </div>
